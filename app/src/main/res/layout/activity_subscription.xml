@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background_light">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_settings"
+        app:tint="?attr/colorPrimary"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subscription Required"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Your trial has expired. Upgrade to premium to continue using all features and generate bills."
+        android:textSize="16sp"
+        android:textColor="#666666" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMonthly"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:text="₹299 - 1 Month Access"
+        app:cornerRadius="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnYearly"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="₹999 - 1 Year Access"
+        app:cornerRadius="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        style="@style/Widget.Material3.Button.TonalButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Secure Payment via Razorpay"
+        android:textSize="12sp"
+        android:textColor="#999999" />
+
+</LinearLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Invoice Details"
+            app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/IDStoreName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                        android:textColor="@color/blue_primary"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Store Name" />
+
+                    <!-- Invoice Info -->
+                    <TextView
+                        android:id="@+id/labelInvoiceNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Invoice No:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/IDStoreName" />
+
+                    <TextView
+                        android:id="@+id/IDInvoiceNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelInvoiceNo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelInvoiceNo"
+                        tools:text="INV-001" />
+
+                    <TextView
+                        android:id="@+id/labelDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Date:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelInvoiceNo" />
+
+                    <TextView
+                        android:id="@+id/IDDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelDate"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelDate"
+                        tools:text="2024-07-29" />
+
+                    <!-- Customer Info -->
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/divider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/IDDate" />
+
+                    <TextView
+                        android:id="@+id/labelCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Customer:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+                    <TextView
+                        android:id="@+id/IDCustomerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelCustomerName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelCustomerName"
+                        tools:text="John Doe" />
+
+                    <TextView
+                        android:id="@+id/labelPhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Phone:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelCustomerName" />
+
+                    <TextView
+                        android:id="@+id/IDPhoneNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelPhoneNumber"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelPhoneNumber"
+                        tools:text="+91 12345 67890" />
+
+                    <TextView
+                        android:id="@+id/labelAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Address:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelPhoneNumber" />
+
+                    <TextView
+                        android:id="@+id/IDAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelAddress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelAddress"
+                        tools:text="123, Main Street, Anytown" />
+
+                    <!-- Item Details -->
+                     <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/IDAddress" />
+
+                    <TextView
+                        android:id="@+id/labelProductType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Product:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                    <TextView
+                        android:id="@+id/IDProductType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelProductType"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelProductType"
+                        tools:text="Gold Ring" />
+
+                    <TextView
+                        android:id="@+id/labelQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Quantity (gms):"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelProductType" />
+
+                    <TextView
+                        android:id="@+id/IDQuantity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelQuantity"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelQuantity"
+                        tools:text="10.5" />
+
+                    <!-- Payment Details -->
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/IDQuantity" />
+
+                    <TextView
+                        android:id="@+id/labelAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Amount:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+                    <TextView
+                        android:id="@+id/IDAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelAmount"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelAmount"
+                        tools:text="₹ 50,000" />
+
+                    <TextView
+                        android:id="@+id/labelPaymentType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Payment Type:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelAmount" />
+
+                    <TextView
+                        android:id="@+id/IDPaymentType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelPaymentType"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelPaymentType"
+                        tools:text="Cash" />
+
+                    <TextView
+                        android:id="@+id/labelTotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Total Amount:"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelPaymentType" />
+
+                    <TextView
+                        android:id="@+id/IDTotalAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:gravity="end"
+                        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                        android:textColor="@color/blue_primary"
+                        android:textStyle="bold"
+                        app:layout_constraintBaseline_toBaselineOf="@id/labelTotalAmount"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/labelTotalAmount"
+                        tools:text="₹ 50,000" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

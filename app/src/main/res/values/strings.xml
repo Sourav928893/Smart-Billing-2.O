@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Smart Billing 2.O</string>
+    <string name="new_bill">New Bill</string>
+    <string name="settings">Settings</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="save_bill">Save Bill</string>
+    <string name="add_item">Add Item</string>
+    <string name="generate_pdf">Generate PDF</string>
+    <string name="shop_settings">Shop Settings</string>
+    <string name="shop_name">Shop Name</string>
+    <string name="owner_name">Owner Name</string>
+    <string name="currency">Currency</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="recent_bills">Recent Bills</string>
+    <string name="welcome_to_the_smart_billing_mobile_application">Welcome to the Smart Billing Mobile Application</string>
+    <string name="search_invoice">Search Invoice</string>
+    <string name="total_sale">Total Sale</string>
+</resources>
